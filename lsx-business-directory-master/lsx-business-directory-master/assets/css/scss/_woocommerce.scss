@@ -1,0 +1,183 @@
+.gutenberg-compatible-template.using-gutenberg {
+	.entry-content {
+		.woocommerce {
+			@include media('>=desktop') {
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 8.4rem;
+				margin-top: 4.25rem;
+			}
+		}
+
+	}
+}
+.woocommerce-page {
+	#main {
+		.quicktags-toolbar {
+			.button {
+				background: none;
+				box-shadow: none;
+				color: #333;
+				text-decoration: underline;
+				height: initial !important;
+				min-height: auto;
+				padding: 1px 7px 2px;
+				text-transform: initial;
+				font-weight: 200;
+			}
+		}
+	}
+}
+// My Account - Listing Tab.
+#main {
+	.woocommerce-MyAccount-navigation {
+		ul {
+			li {
+				&.woocommerce-MyAccount-navigation-link--listings {
+					a {
+						&:before {
+							content: '\f03a';
+						}
+					}
+				}
+			}
+		}
+	}
+	.lsx-bd-my-account.listings {
+		.my-listings {
+			.btn {
+				height: 40px;
+				padding: 12px 40px;
+				&.tertiary-border-btn {
+					padding: 10px 40px;
+				}
+			}
+		}
+		.listing-form {
+			background: white;
+			border: 1px solid $separator_color;
+			border-radius: 6px;
+			text-align: left;
+			fieldset {
+				padding-left: 3rem;
+				padding-right: 3rem;
+				margin-top: 3rem;
+				.form-row {
+					@include media('<=tablet') {
+						float: inherit;
+						width: 100%;
+					}
+				}
+				legend {
+					font-size: 18px;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+				label {
+					font-weight: 500;
+				}
+				&:first-of-type {
+					padding-left: 0;
+					padding-right: 0;
+					margin-top: 0;
+					legend, .form-row {
+						padding-left: 3rem !important;
+						padding-right: 3rem !important;
+					}
+					legend {
+						text-transform: capitalize;
+						font-weight: normal;
+						background: #E6E6E6;
+						padding-top: 2rem;
+						padding-bottom: 2rem;
+						font-family: Lora;
+						font-size: 22px;
+						color: #434343;
+					}
+				}
+				&.listing-back-fieldset {
+					a {
+						font-size: 14px;
+						font-weight: bold;
+						font-family: "Noto Sans";
+						&:before {
+							content: '\f104';
+							margin-right: 5px;
+							font-family: FontAwesome;
+							font-size: 18px;
+							font-weight: 200;
+						}
+					}
+				}
+			}
+			p {
+				button[type="submit"] {
+					margin: 4rem 3rem 3rem;
+					padding-left: 4rem;
+					padding-right: 4rem;
+				}
+			}
+		}
+	}
+}
+
+.lsx-bd-my-account {
+	&.listings {
+		.no-listings {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			padding: 52px;
+
+			.fa-list {
+				font-size:37px;
+				color: $grey;
+			}
+
+			h3 {
+				margin-top:30px;
+				margin-bottom:30px;
+			}
+		}
+	}
+}
+
+.listing-form {
+	.form-row {
+		&.listing-options {
+			label {
+				width:100%;
+				display:block;
+			}
+			.woocommerce-input-wrapper {
+				input {
+					width:5%;
+					display:inline-block;
+					min-height: 10px;
+					height: auto;
+					border: none;
+					box-shadow: none;
+					/*&[checked="checked"] {
+						&:before {
+							content: 'Current Subscription';
+							position: absolute;
+							bottom: 2rem;
+							width: 100%;
+							min-width: 250px;
+						}
+					}*/
+				}
+				label {
+					width: 90%;
+					display:inline-block;
+				}
+			}
+		}
+		.remove-image {
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
